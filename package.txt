@@ -1,0 +1,2 @@
+com.mfashiongallery.emag
+com.miui.miwallpaper
