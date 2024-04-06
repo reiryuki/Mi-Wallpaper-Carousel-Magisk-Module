@@ -21,7 +21,7 @@
 
 ## Installation Guide & Download Link
 - Install Miui Core Magisk Module first: https://github.com/reiryuki/Miui-Core-Magisk-Module
-- Install this module https://www.pling.com/p/ via Magisk app or KernelSU app or Recovery if Magisk installed
+- Install this module https://www.pling.com/p/2144435/ via Magisk app or KernelSU app or Recovery if Magisk installed
 - Reboot
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
 - Go to app info of Mi Wallpaper Carousel and allow the network access
