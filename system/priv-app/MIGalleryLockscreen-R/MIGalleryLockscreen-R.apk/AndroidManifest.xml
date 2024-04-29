@@ -243,6 +243,11 @@
 			android:required="false"
 			>
 		</uses-library>
+		<uses-library
+			android:name="com.miui.core"
+			android:required="false"
+			>
+		</uses-library>
 		<activity
 			android:theme="@7F120111"
 			android:label="@7F110062"
