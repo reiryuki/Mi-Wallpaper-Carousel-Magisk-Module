@@ -43,8 +43,9 @@
 - https://t.me/androidryukimodsdiscussions/64467
 - Global: https://t.me/androidryukimodsdiscussions/29836
 
-## Known Issue
-- If you are activating "Lock after screen timeout" feature in LineageOS ROM, then the wallpaper slideshow will not changed until the timeout is occur or you can Lockdown the lockscreen and turn off display first instead.
+## Known Issues
+- Manual set lockscreen wallpaper doesn't work
+- If you are activating "Lock after screen timeout" feature in LineageOS ROM, then the wallpaper slideshow will not changed until the timeout is occur or you can lockdown the lockscreen and turn off display first instead.
 
 ## Support & Bug Report
 - https://t.me/androidryukimodsdiscussions/2618
