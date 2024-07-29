@@ -2,9 +2,9 @@
 allow system_server system_file file write
 
 # context
-create { system_lib_file vendor_file vendor_configs_file theme_data_file app_data_file }
-allow { system_file system_lib_file vendor_file vendor_configs_file theme_data_file app_data_file } labeledfs filesystem associate
-allow init { system_file system_lib_file vendor_file vendor_configs_file theme_data_file app_data_file } { dir file } relabelfrom
+create { system_lib_file vendor_file vendor_configs_file theme_data_file system_data_file }
+allow { system_file system_lib_file vendor_file vendor_configs_file theme_data_file system_data_file } labeledfs filesystem associate
+allow init { system_file system_lib_file vendor_file vendor_configs_file theme_data_file system_data_file } { dir file } relabelfrom
 
 # fd
 allow rs { surfaceflinger hal_graphics_allocator_default } fd use
@@ -20,7 +20,7 @@ allow rs surfaceflinger unix_stream_socket { read write }
 
 # file
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } rs_exec file { read open execute execute_no_trans getattr }
-allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } app_data_file file execute
+allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } system_data_file file execute
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } proc_pid_max file { read open }
 allow { system_app priv_app platform_app untrusted_app_29 untrusted_app_27 untrusted_app } app_exec_data_file file { read write open execute }
 allow installd app_exec_data_file file getattr

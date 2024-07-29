@@ -5,7 +5,7 @@
 - The MIT license specified here is for the Magisk Module only, not for Miui apps.
 
 ## Descriptions
-- Mi Wallpaper Carousel by Xiaomi Inc. ported and integrated as a Magisk Module for all supported and rooted devices with Magisk
+- Wallpaper app by Xiaomi Inc. ported and integrated as a Magisk Module for all supported and rooted devices with Magisk
 
 ## Sources
 - https://apkmirror.com com.mfashiongallery.emag & com.miui.miwallpaper by Xiaomi Inc.
@@ -22,18 +22,12 @@
 ## Installation Guide & Download Link
 - Install Miui Core Magisk Module first: https://github.com/reiryuki/Miui-Core-Magisk-Module
 - Install this module https://www.pling.com/p/2144435/ via Magisk app or KernelSU app or Recovery if Magisk installed
+- If you are using KernelSU, you need to disable Unmount Modules by Default in KernelSU app settings
 - Reboot
 - If you are using KernelSU, you need to allow superuser list manually all package name listed in package.txt (and your home launcher app also) (enable show system apps) and reboot afterwards
 - Go to app info of Mi Wallpaper Carousel and allow the network access
 - If pictures does not show up in the app, then you need to use VPN (because your network provider is blocking the source link)
 - To use Mi Wallpaper Carousel slideshow, long tap home screen, tap wallpaper image, tap Live Wallpaper Picker, tap Mi Wallpaper Carousel, set wallpaper both first, then enable slideshow via Mi Wallpaper Carousel app. (Just one click. If you disable and re-enable it again, it will not work and you need to repeat the steps.)
-
-## Tested on
-- Android 11 DotOS ROM
-- Android 12 AncientOS ROM
-- Android 12.1 Nusantara ROM
-- Android 13 AOSP ROM & CrDroid ROM
-- Android 14 LineageOS ROM
 
 ## Optionals
 - https://t.me/androidryukimodsdiscussions/54012
