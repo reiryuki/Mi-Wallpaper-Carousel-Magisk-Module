@@ -15,7 +15,7 @@
 
 ## Requirements
 - NOT in Miui ROM
-- Android 5 and up
+- Android 5 (SDK 21) and up
 - Magisk or KernelSU installed
 - Miui Core Magisk Module installed
 
@@ -30,18 +30,18 @@
 - To use Mi Wallpaper Carousel slideshow, long tap home screen, tap wallpaper image, tap Live Wallpaper Picker, tap Mi Wallpaper Carousel, set wallpaper both first, then enable slideshow via Mi Wallpaper Carousel app. (Just one click. If you disable and re-enable it again, it will not work and you need to repeat the steps.)
 
 ## Optionals
-- https://t.me/androidryukimodsdiscussions/54012
-- Global: https://t.me/androidryukimodsdiscussions/60861
+- https://t.me/ryukinotes/42
+- Global: https://t.me/ryukinotes/35
 
 ## Troubleshootings
-- https://t.me/androidryukimodsdiscussions/64467
-- Global: https://t.me/androidryukimodsdiscussions/29836
+- https://t.me/ryukinotes/19
+- Global: https://t.me/ryukinotes/34
 
 ## Known Issue
-- If you are activating "Lock after screen timeout" feature in LineageOS ROM, then the wallpaper slideshow will not be changed until the timeout is occur or you can lockdown the lockscreen and turn off display first instead.
+- If you are activating "Every time device unlocks" and activating "Lock after screen timeout" feature in LineageOS ROM, then the wallpaper slideshow will not be changed until the timeout is occur. You can lockdown the lockscreen and turn off display first instead.
 
 ## Support & Bug Report
-- https://t.me/androidryukimodsdiscussions/2618
+- https://t.me/ryukinotes/54
 - If you don't do above, issues will be closed immediately
 
 ## Credits and Contributors
@@ -49,6 +49,6 @@
 - You can contribute ideas about this Magisk Module here: https://t.me/androidappsportdevelopment
 
 ## Sponsors
-- https://t.me/androidryukimodsdiscussions/2619
+- https://t.me/ryukinotes/25
 
 

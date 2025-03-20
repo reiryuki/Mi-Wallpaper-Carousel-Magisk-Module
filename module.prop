@@ -1,8 +1,8 @@
 id=MiWallpaperCarousel
 name=Mi Wallpaper Carousel
-version=v0.4
-versionCode=4
+version=v0.5
+versionCode=5
 author=Rei Ryuki the Fixer
-description=Wallpaper app by Xiaomi Inc. ported for any Android 5 and up non-Miui ROM.
+description=Wallpaper app by Xiaomi Inc. ported for any Android 5 (SDK 21) and up non-Miui ROM.
 
 

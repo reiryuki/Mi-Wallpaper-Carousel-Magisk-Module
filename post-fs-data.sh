@@ -46,21 +46,6 @@ chmod 0755 $MODPATH/*/libmagiskpolicy.so
 FILE=$MODPATH/sepolicy.pfsd
 sepolicy_sh
 
-# permission
-if [ "$API" -ge 26 ]; then
-  DIRS=`find $MODPATH/vendor\
-             $MODPATH/system/vendor -type d`
-  for DIR in $DIRS; do
-    chown 0.2000 $DIR
-  done
-  if [ -L $MODPATH/system/vendor ]\
-  && [ -d $MODPATH/vendor ]; then
-    chcon -R u:object_r:vendor_file:s0 $MODPATH/vendor
-  else
-    chcon -R u:object_r:vendor_file:s0 $MODPATH/system/vendor
-  fi
-fi
-
 # cleaning
 FILE=$MODPATH/cleaner.sh
 if [ -f $FILE ]; then
