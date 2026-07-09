@@ -204,7 +204,8 @@ for NAME in $NAMES; do
    /persist/magisk/$NAME\
    /data/unencrypted/magisk/$NAME\
    /cache/magisk/$NAME\
-   /cust/magisk/$NAME
+   /cust/magisk/$NAME\
+   /klogdump/magisk/$NAME
 done
 }
 
@@ -242,20 +243,17 @@ sed -i 's|#2||g' $MODPATH/post-fs-data.sh
 }
 permissive() {
 FILE=/sys/fs/selinux/enforce
-SELINUX=`cat $FILE`
-if [ "$SELINUX" == 1 ]; then
-  if ! setenforce 0; then
-    echo 0 > $FILE
-  fi
-  SELINUX=`cat $FILE`
-  if [ "$SELINUX" == 1 ]; then
+FILE2=/sys/fs/selinux/policy
+if [ "`toybox cat $FILE`" = 1 ]; then
+  chmod 640 $FILE
+  chmod 440 $FILE2
+  echo 0 > $FILE
+  if [ "`toybox cat $FILE`" = 1 ]; then
     ui_print "  Your device can't be turned to Permissive state."
     ui_print "  Using Magisk Permissive mode instead."
     permissive_2
   else
-    if ! setenforce 1; then
-      echo 1 > $FILE
-    fi
+    echo 1 > $FILE
     sed -i 's|#1||g' $MODPATH/post-fs-data.sh
   fi
 else
@@ -327,19 +325,27 @@ rm -f `find $MODPATH/system -type f -name extract`
 hide_oat
 
 # media
-if [ -d $MODPATH/system/product/media ]; then
-  if [ ! -d /product/media ] && [ -d /system/media ]; then
-    ui_print "- Using /system/media instead of /product/media"
-    mv -f $MODPATH/system/product/media $MODPATH/system
-    rm -rf $MODPATH/system/product
-    ui_print " "
-  elif [ ! -d /product/media ] && [ ! -d /system/media ]; then
-    ui_print "! /product/media & /system/media not found"
-    ui_print " "
-  fi
+unused() {
+if [ ! -d /product/media ] && [ -d /system/media ]; then
+  ui_print "- Using /system/media instead of /product/media"
+  mv -f $MODPATH/system/product/media $MODPATH/system
+  rm -rf $MODPATH/system/product
+  ui_print " "
+elif [ ! -d /product/media ] && [ ! -d /system/media ]; then
+  ui_print "! /product/media & /system/media not found"
+  ui_print " "
 fi
+}
 
-
+# prepare
+DIR=/storage/emulated/"$UID"/Android/data/com.mfashiongallery.emag/files
+DIR2=/storage/emulated/"$UID"/Android/data/com.miui.miwallpaper/files
+ui_print "- Creating directories:"
+ui_print "  $DIR"
+mkdir -p $DIR
+ui_print "  $DIR2"
+mkdir -p $DIR2
+ui_print " "
 
 
 
